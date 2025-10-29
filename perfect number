@@ -7,3 +7,7 @@ if(sum==number):
     print("%d is perfect number"%number)
 else:
     print("%d is not a perfect number"%number)
+
+OUTPUT:
+enter the number:6
+6 is perfect number
