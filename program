@@ -11,3 +11,7 @@ while temp>0:
   temp=temp//10
 
 print("sum of digits:",sum)
+
+OUTPUT:
+enter the number153
+sum of digits: 9
