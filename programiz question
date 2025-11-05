@@ -1,0 +1,186 @@
+1. X = [[1,2,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[9,8,7],
+    [6,5,4],
+    [3,2,1]]
+
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+for r in result:
+   print(r)
+
+OUTPUT:
+[10, 10, 10]
+[10, 10, 10]
+[10, 10, 10]
+
+2. X = [[1,2],
+    [3,4],
+    [5,6]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+# iterate through rows
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[j][i] = X[i][j]
+
+for r in result:
+   print(r)
+
+OUTPUT:
+[1, 3, 5]
+[2, 4, 6]
+
+3. X = [[1,2,3],
+    [4 ,5,6],
+    [7,8,9]]
+# 3x3 matrix
+Y = [[9,8,7],
+    [6,5,4],
+    [3,2,1]]
+# result is 3x3
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+# iterate through rows of X
+for i in range(len(X)):
+   # iterate through columns of Y
+   for j in range(len(Y[0])):
+       # iterate through rows of Y
+       for k in range(len(Y)):
+           result[i][j] += X[i][k] * Y[k][j]
+
+for r in result:
+   print(r)
+
+OUTPUT:
+[30, 24, 18]
+[84, 69, 54]
+[138, 114, 90]
+
+4.  dict_1 = {1: 'a', 2: 'b'}
+dict_2 = {2: 'c', 4: 'd'}
+
+print(dict_1 | dict_2)
+
+OUTPUT:
+{1: 'a', 2: 'c', 4: 'd'}
+
+5. my_list = [1, 2, 3, 4, 5]
+
+print(my_list[:])
+
+OUTPUT:
+[1, 2, 3, 4, 5]
+
+6. dt = {5:4, 1:6, 6:3}
+
+sorted_dt = {key: value for key, value in sorted(dt.items(), key=lambda item: item[1])}
+
+print(sorted_dt)
+
+OUTPUT:
+{6: 3, 5: 4, 1: 6}
+
+7. list_1 = [1, 'a']
+list_2 = [3, 4, 5]
+
+list_joined = list_1 + list_2
+print(list_joined)
+
+OUTPUT:
+[1, 'a', 3, 4, 5]
+
+8. my_string = "I love python."
+
+# prints "love"
+print(my_string[2:6])
+
+# prints "love python."
+print(my_string[2:])
+
+# prints "I love python"
+print(my_string[:-1])
+
+OUTPUT:
+love
+love python.
+I love python
+
+9. str1 = "Race"
+str2 = "Care"
+
+# convert both the strings into lowercase
+str1 = str1.lower()
+str2 = str2.lower()
+
+# check if length is same
+if(len(str1) == len(str2)):
+
+    # sort the strings
+    sorted_str1 = sorted(str1)
+    sorted_str2 = sorted(str2)
+
+    # if sorted char arrays are same
+    if(sorted_str1 == sorted_str2):
+        print(str1 + " and " + str2 + " are anagram.")
+    else:
+        print(str1 + " and " + str2 + " are not anagram.")
+
+else:
+    print(str1 + " and " + str2 + " are not anagram.")
+
+OUTPUT:
+race and care are anagram.
+
+10. def get_permutation(string, i=0):
+
+    if i == len(string):   	 
+        print("".join(string))
+
+    for j in range(i, len(string)):
+
+        words = [c for c in string]
+   
+        # swap
+        words[i], words[j] = words[j], words[i]
+   	 
+        get_permutation(words, i + 1)
+
+print(get_permutation('yup'))
+
+OUTPUT:
+yup
+ypu
+uyp
+upy
+puy
+pyu
+None
+
+11.Python Program to Remove Duplicate Element From a List
+
+list_1 = [1, 2, 1, 4, 6]
+
+print(list(set(list_1)))
+
+OUTPUT:
+[1, 2, 4, 6]
+
+
+
+
