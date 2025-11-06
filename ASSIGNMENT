@@ -1,0 +1,225 @@
+1. REPEATED 
+
+nums = [3, 1, 3, 4, 2]
+
+for i in nums:
+    if nums.count(i) > 1:
+        print("Repeated number is:", i)
+        break
+OUTPUT:
+Repeated number is: 3
+
+2. SELECTIVE
+
+matrix = [
+    [1, 4, 7, 11, 15],
+    [2, 5, 8, 12, 19],
+    [3, 6, 9, 16, 22],
+    [10, 13, 14, 17, 24],
+    [18, 21, 23, 26, 30]
+]
+
+target = int(input("Enter number to search: "))
+
+found = False
+
+for row in matrix:
+    if target in row:
+        found = True
+        break
+
+if found:
+    print("True")
+else:
+    print("False")
+
+OUTPUT:
+Enter number to search: 16
+True
+
+3. 3D MATRIX:
+
+x=[[1,1,1],
+  [2,2,2],
+  [3,3,3]]
+y=[[1,1,1],
+  [2,2,2],
+  [3,3,3]]
+z=[[1,1,1],
+   [2,2,2],
+   [3,3,3]]
+r=[[0,0,0],
+       [0,0,0],
+       [0,0,0]]
+
+for i in range(len(x)):
+  
+  for j in range(len(y[0])):
+    for k in range(len(y)):
+      
+     r[i][j]=r[i][j]+(x[i][k]*y[k][j])
+f=[[0,0,0],
+  [0,0,0],
+  [0,0,0]]
+for i in range (len(r)):
+  for j in range (len(z[0])):
+    for k in range(len(z)):
+      f[i][j]=f[i][j]+(r[i][k]*z[k][j])
+print(f)
+
+OUTPUT:
+[[36,36,36],
+[72,72,72],
+[108,108,108]]
+
+4. 2D MATRIX:
+
+a=[[1,2],
+  [5,3]]
+b=[[2,3],
+  [4,1]]
+c=[[0,0],
+  [0,0]]
+for i in range(len(a)):
+   for j in range(len(a[0])):
+     for k in range(len(b)):
+       c[i][j]+=a[i][k]*b[k][j]
+for r in c:
+  print(r)
+[12:34 AM, 11/6/2025] Dharshini Suresh: Mat Sum:
+10 5
+22 18
+
+4. 2D MATRIX:
+
+a=[[1,2],
+  [5,3]]
+b=[[2,3],
+  [4,1]]
+c=[[0,0],
+  [0,0]]
+for i in range(len(a)):
+   for j in range(len(a[0])):
+     for k in range(len(b)):
+       c[i][j]+=a[i][k]*b[k][j]
+for r in c:
+  print(r)
+
+OUTPUT:
+10 5
+22 18
+
+5.INTERSECTION
+
+N1 = [1, 2, 3, 4, 5]
+N2 = [4, 5, 6, 7, 8]
+
+intersection = []
+for i in N1:
+    if i in N2:
+        intersection.append(i)
+
+print("Intersection:", intersection)
+
+OUTPUT:
+Intersection: [4, 5]
+
+6.PERFECT SQUARE
+import math
+
+numbers = [4, 7, 9, 10, 16]
+
+for n in numbers:
+    root = int(math.sqrt(n))
+    if root * root == n:
+        print(n, "is a perfect square")
+    else:
+        print(n, "is not a perfect square")
+
+OUTPUT:
+4 is a perfect square
+7 is not a perfect square
+9 is a perfect square
+10 is not a perfect square
+16 is a perfect square
+
+7. FREQUENCY
+
+arr = [1, 2, 2, 3, 1, 2, 4, 1, 1]
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+print("Frequencies:")
+for num in freq:
+    print(num, ":", freq[num])
+max_num = max(freq, key=freq.get)
+print("\nMost frequent element:", max_num, "→", freq[max_num])
+
+OUTPUT:
+
+Frequencies of elements:
+1: 4
+2: 3
+3: 1
+4: 1
+
+Element with highest frequency:
+1 → 4
+
+8. You are climbing a staircase. It takes n steps to reach the top.
+Each time, you can either climb 1 step or 2 steps.
+Write a Python program to find how many distinct ways you can climb to the top.
+
+def climb_stairs(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        a, b = 1, 2
+        for i in range(3, n + 1):
+            a, b = b, a + b
+        return b
+
+n = int(input("Enter number of steps: "))
+print("Number of ways to climb:", climb_stairs(n))
+
+OUTPUT:
+Enter number of steps: 5
+Number of ways to climb: 8
+
+9.LUCKY NUMBER
+
+n = int(input("Enter a number: "))
+
+def is_lucky(num):
+while num > 9:
+s = 0
+while num > 0:
+s += num % 10
+num //= 10
+num = s
+return num == 1
+
+if is_lucky(n):
+print("Lucky Number")
+else:
+print("Not a Lucky Number")
+
+output:
+Enter a number: 19
+Lucky Number
+
+10. UNION IN LIST
+
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+union_list = list(set(list1) | set(list2))
+
+print("Union of two lists:", union_list)
+
+Output:
+
+Union of two lists: [1, 2, 3, 4, 5, 6]
+
+
